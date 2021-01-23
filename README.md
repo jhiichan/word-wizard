@@ -1,1 +1,1 @@
-# word-wizard
+# Word Wizard
