@@ -13,14 +13,32 @@ import spells from '../data/spells.json';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.background
+        backgroundColor: colors.white
+    },
+    quickSlotContainer: {
+        marginVertical: 10,
+        marginHorizontal: 15,
+        borderWidth: 1,
+        borderColor: colors.border,
+        borderRadius: 10
+    },
+    spellContainer: {
+        marginVertical: 10,
+        marginHorizontal: 15,
+        borderWidth: 1,
+        borderColor: colors.border,
+        borderRadius: 10
+    },
+    quickSlot: {
+        paddingVertical: 15,
+        paddingHorizontal: 15
     },
     inputSpell: {
-        backgroundColor: colors.white,
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: colors.primary,
         textAlign: 'center',
-        padding: 5,
-        marginTop: 10,
-        marginBottom: '20%'
+        paddingVertical: 25
     }
 });
 
@@ -32,7 +50,6 @@ export default ({navigation}) => {
         enemy,
         spellCasted,
         setSpellCasted,
-        castableSpells,
         setCastableSpells,
         spellPlaceholder,
         hasSpellsOpened,
@@ -70,7 +87,7 @@ export default ({navigation}) => {
 
     return(
         <SafeAreaView style={styles.container}>
-            <StatusBar barStyle='light-content' backgroundColor={colors.background} />
+            <StatusBar barStyle='light-content' backgroundColor={colors.secondary} />
 
             <NavBar onPress={() => navigation.push('Menu')} />
 
@@ -88,12 +105,18 @@ export default ({navigation}) => {
                 playerLevel={enemy.level}
                 playerHP={enemy.hp}
                 playerMaxHP={enemy.maxHP}
+                imageAssetSrc={enemy.imageAssetSrc}
             />
 
-            <TouchableOpacity onPress={openSpells}>
-                <Text>Open Spells</Text>
-            </TouchableOpacity>
-
+            <View style={styles.quickSlotContainer}>
+                <TouchableOpacity
+                    style={styles.quickSlot}
+                    onPress={openSpells}
+                >
+                    <Text>Open Spells</Text>
+                </TouchableOpacity>
+            </View>
+            
             <View style={styles.spellContainer}>
                 <TextInput
                     style={styles.inputSpell}

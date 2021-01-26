@@ -9,21 +9,23 @@ export const GameContextProvider = ({children}) => {
     const [hasSpellsOpened, setHasSpellsOpened] = useState(false);
 
     const [user, setUser] = useState({
-        name: "Jhii",
+        name: "The Master Wizard",
         level: 1,
         hp: 100,
         maxHP: 100,
         mp: 20,
-        maxMP: 20
+        maxMP: 20,
+        imageAssetSrc: require('../assets/images/dummy_large.png')
     });
 
     const [enemy, setEnemy] = useState({
-        name: "iFrit",
+        name: "Ground Golem",
         level: 1,
         hp: 100,
         maxHP: 100,
         mp: 0,
-        maxMP: 0
+        maxMP: 0,
+        imageAssetSrc: require('../assets/monsters/golem/asset_golem.png')
     });
 
     const [spellCasted, setSpellCasted] = useState(spellPlaceholder);

@@ -5,7 +5,10 @@ import colors from '../constants/colors';
 
 const styles = StyleSheet.create({
     container: {
-        paddingVertical: 5
+        backgroundColor: colors.secondary,
+        padding: 10,
+        marginVertical: 10,
+        marginHorizontal: 15
     },
     textInfo: {
         color: colors.white,

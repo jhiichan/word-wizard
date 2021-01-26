@@ -7,11 +7,17 @@ import colors from '../constants/colors';
 const styles = StyleSheet.create({
     container: {
         alignItems: 'flex-start',
-        paddingLeft: 5,
-        paddingVertical: 5
+        marginLeft: 15,
+        marginTop: 10
+    },
+    menuContainer: {
+        padding: 5,
+        borderWidth: 1,
+        borderColor: colors.border,
+        borderRadius: 10
     },
     menuIcon: {
-        color: colors.white,
+        color: colors.primary,
         fontSize: 36
     }
 });
@@ -19,7 +25,7 @@ const styles = StyleSheet.create({
 export default ({onPress}) => {
     return(
         <View style={styles.container}>
-            <TouchableOpacity onPress={onPress}>
+            <TouchableOpacity style={styles.menuContainer} onPress={onPress}>
                 <MaterialIcons name="menu" style={styles.menuIcon} />
             </TouchableOpacity>
         </View>

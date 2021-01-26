@@ -10,7 +10,8 @@ const styles = StyleSheet.create({
         paddingVertical: 10
     },
     textMenu: {
-        fontSize: 20
+        fontSize: 20,
+        color: colors.primary
     },
     separator: {
         backgroundColor: colors.border,

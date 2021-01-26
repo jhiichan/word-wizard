@@ -2,13 +2,13 @@
   "expo": {
     "name": "word-wizard",
     "slug": "word-wizard",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#666699"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -17,15 +17,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.lojhiic.wordwizard"
+      "bundleIdentifier": "com.lojhiic.wordwizard",
+      "supportsTablet": true
     },
     "android": {
+      "package": "com.lojhiic.wordwizard",
+      "versionCode": 2,
+      "permissions": [],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.lojhiic.wordwizard"
+        "backgroundColor": "#666699"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"

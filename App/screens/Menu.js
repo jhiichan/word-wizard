@@ -8,6 +8,7 @@ import colors from '../constants/colors';
 
 const styles = StyleSheet.create({
     menuIcon: {
+        color: colors.primary,
         paddingRight: 5,
         fontSize: 24
     }
@@ -27,8 +28,8 @@ export default ({navigation}) => {
             <MenuItemSeparator />
 
             <MenuItem
-                title="Game"
-                onPress={() => navigation.push('Game')}
+                title="Battle"
+                onPress={() => navigation.push('Battle')}
                 icon={<MaterialIcons name="games" style={styles.menuIcon} />}
             />
         </SafeAreaView>
