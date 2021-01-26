@@ -7,7 +7,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import Home from '../screens/Home';
 import Menu from '../screens/Menu';
-import Game from '../screens/Game';
+import Battle from '../screens/Battle';
 import SpellList from '../screens/SpellList';
 
 import colors from '../constants/colors';
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10
     },
     headerIcon: {
-        color: colors.background,
+        color: colors.primary,
         fontSize: 36
     }
 });
@@ -26,11 +26,11 @@ const MainStack = createStackNavigator();
 const MainStackScreen = () => (
     <MainStack.Navigator
         //headerMode="none"
-        initialRouteName="Game"
+        initialRouteName="Home"
     >
         <MainStack.Screen name="Home" component={Home} options={{headerShown: false}} />
         <MainStack.Screen name="Menu" component={Menu} />
-        <MainStack.Screen name="Game" component={Game} options={{headerShown: false}} />
+        <MainStack.Screen name="Battle" component={Battle} options={{headerShown: false}} />
     </MainStack.Navigator>
 );
 

@@ -1,7 +1,6 @@
 export default {
-    primary: "",
-    secondary: "",
-    background: "#333333",
+    primary: "#330033",
+    secondary: "#666699",
     white: "#ffffff",
-    border: "#333333"
+    border: "#707070"
 }
